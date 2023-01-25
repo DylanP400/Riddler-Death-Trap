@@ -1,0 +1,48 @@
+* {
+    text-align:center;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+    width: 800px;
+    max-width: 80%;
+    padding: 10px;
+    box-shadow: 5px 5px 10px 10px black;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../images/Gotham_City_.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.btn {
+    padding: 25px;
+    margin: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: red;
+    background-color:bisque
+}
+
+.btn:hover {
+    background-color: black;
+    color: red;
+    font-size: 25px;
+}
+
+.container-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
