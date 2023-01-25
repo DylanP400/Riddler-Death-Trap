@@ -1,48 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Oswald&family=Roboto+Condensed&display=swap');
+
 * {
-    text-align:center;
     box-sizing: border-box;
 }
 
-.container {
-    margin: 0;
-    padding: 0;
-    background-color: aqua;
-    width: 800px;
-    max-width: 80%;
-    padding: 10px;
-    box-shadow: 5px 5px 10px 10px black;
-}
 
 body {
     width: 100vw;
     height: 100vh;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 
     background-image: url(../images/Gotham_City_.webp);
-    background-position: center;
+    background-position:center;
     background-size: cover;
     background-repeat: no-repeat
 }
 
-.btn {
-    padding: 25px;
-    margin: 25px;
-    border: 2px solid black;
-    border-radius: 5px;
-    color: red;
-    background-color:bisque
+/* Question container */ 
+
+#question-container {
+ display: flex;
+ justify-content: center;
+ margin-top: 40px;
 }
 
+/* Container for the game */
+.container {
+    padding: 10px;
+    background-color: aqua;
+    width: 800px;
+    max-width: 80%;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px black;
+    border-radius: 20px;
+    
+    background-image: url(../images/bman-grey-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* styles for game buttons */ 
+.btn {
+    padding: 15px 30px;
+    margin: 30px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    color: black;
+    background-color: whitesmoke;
+    font-size: 1.6iirem;
+    font-family: 'Crimson Text', serif;
+    outline: none;
+    
+}
+/* To create a hover effect When you place the mouse on the buttons */ 
 .btn:hover {
     background-color: black;
-    color: red;
+    color: white;
+    border: 3px solid white;
     font-size: 25px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2rem;
+    transition: 1s;
 }
-
-.container-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* Id for the layout of the buttons */
+.game-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2px;
+    padding-top: 100px;
+    margin: 30px 0;
 }
