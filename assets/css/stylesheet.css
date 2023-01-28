@@ -91,3 +91,10 @@ body {
     display: none;
 }
 */ 
+
+/* Scores */
+.score-area {
+ display: flex;
+ justify-content: space-between;
+ font-size: 20px;
+}
