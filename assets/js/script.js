@@ -14,7 +14,7 @@ for (let i = 0; i < scoreAreaElement.length; i++) {
 }
 
 let shuffledQuestions, currentQuestionIndex 
-
+// function to get the game started
 function runGame() {
     console.log('run')
     playButton.classList.add('hidden')
@@ -30,15 +30,28 @@ function runGame() {
     setNextQuestion(shuffledQuestions, currentQuestionIndex)
 
     }
-
+// function to set the next question 
 function setNextQuestion(question, index) {
     showQuestion(question[index])
 }
-
+// Function to show answers to question 
 function showQuestion(question) {
     questionElement.innerText = question.question 
+    question.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+        gameAnswersElement.appendChild(button)
+    })
 }
 
+function selectAnswer(e) {
+
+}
 
 
 // Questions for the game 
