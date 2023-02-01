@@ -393,7 +393,7 @@ const questions = [
         ]
     },
     {
-        question: 'What doesn t kill you just make you?',
+        question: 'What doesnt kill you just make you?',
         answers: [{
                 text: 'Stronger',
                 correct: false
