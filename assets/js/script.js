@@ -13,6 +13,8 @@ for (let i = 0; i < scoreAreaElement.length; i++) {
     scoreAreaElement[i].classList.add('hidden')
 }
 
+let shuffledQuestions, currentQuestionIndex 
+
 function runGame() {
     console.log('run')
     playButton.classList.add('hidden')
@@ -22,14 +24,19 @@ function runGame() {
      for (let i = 0; i < scoreAreaElement.length; i++) {
         scoreAreaElement[i].classList.remove('hidden') // for loop to remove hidden class from the score
      }
+
+     shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    setNextQuestion(shuffledQuestions, currentQuestionIndex)
+
     }
 
-function setNextQuestion() {
-
+function setNextQuestion(question, index) {
+    showQuestion(question[index])
 }
 
-function selectAnswer() {
-    
+function showQuestion(question) {
+    questionElement.innerText = question.question 
 }
 
 
