@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     width: 100vw;
     height: 100vh;
@@ -17,14 +16,41 @@ body {
     background-image: url(../images/Gotham_City_.webp);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
 }
+
+body.correct {
+    color: green;
+    background-color: green;
+    background-image: none;
+}
+
+
+body.wrong {
+    color: red;
+    background-color: red;
+    background-image: none;
+}
+
+button.correct {
+    color: black;
+    background-color: green;
+}
+
+button.wrong {
+    color: black;
+    background-color: red;
+}
+
 
 /* Question container */
 #question-container {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 10px;
+    font-size: 25px;
+    color: blue;
+    font-family: 'Crimson Text', serif;
 }
 
 /* Container for the game */
@@ -38,10 +64,11 @@ body {
 
     background-image: url(../images/bman-grey-bg.jpg);
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    opacity: .9;
 }
 
 /* styles for game buttons */
@@ -79,8 +106,10 @@ body {
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 8px;
-    margin: 100px 150px 10px 10px;
+    justify-items: center;
+    gap: 30px;
+    margin-top: 175px;
+    margin-right: 275px;
 }
 
 .play-controls {
