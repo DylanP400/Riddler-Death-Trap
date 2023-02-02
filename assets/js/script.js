@@ -2,7 +2,10 @@ const playButton = document.getElementById('play-btn')
 playButton.addEventListener('click', runGame)
 
 const nextButton = document.getElementById('next-btn')
-
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion() // error
+})
 const questionContainerElement = document.getElementById('question')
 
 const gameAnswersElement = document.getElementById('game-answers') 
@@ -32,9 +35,10 @@ function runGame() {
     }
 // function to set the next question 
 function setNextQuestion(question, index) {
-    showQuestion(question[index])
+    resetState()
+    showQuestion(question[index]) // error
 }
-// Function to show answers to question 
+// Function to show answers for question 
 function showQuestion(question) {
     questionElement.innerText = question.question 
     question.answers.forEach(answer => {
@@ -46,13 +50,42 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswer)
         gameAnswersElement.appendChild(button)
+        
     })
 }
 
 function selectAnswer(e) {
-
+const selectedButton = e.target
+const correct = selectedButton.dataset.correct
+setStatusClass(document.body, correct)
+Array.from(gameAnswersElement.children).forEach(button => {
+    setStatusClass(button,button.dataset.correct)
+    nextButton.classList.remove('hidden')
+})
 }
 
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+    }
+}
+
+function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+}
+
+// function to reset the answers of the game
+function resetState() {
+    nextButton.classList.add('hidden')
+    while (gameAnswersElement.firstChild) {
+        gameAnswersElement.removeChild
+        (gameAnswersElement.firstChild)
+    }
+}
 
 // Questions for the game 
 const questions = [
