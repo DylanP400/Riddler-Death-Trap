@@ -3,22 +3,30 @@
 * {
     box-sizing: border-box;
 }
-
+.header {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+   
+}
 body {
     width: 100vw;
     height: 100vh;
     padding: 0;
-    margin: 0;
+    margin: 0; /*
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 
     background-image: url(../images/Gotham_City_.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+/* colors for the background & buttons correct and wrong answers */
 body.correct {
     color: green;
     background-color: green;
@@ -41,7 +49,7 @@ button.wrong {
     color: black;
     background-color: red;
 }
-
+ 
 
 /* Question container */
 #question-container {
@@ -83,7 +91,7 @@ button.wrong {
     font-family: 'Crimson Text', serif;
     outline: none;
 }
-
+/* Play button and next button */ 
 .play-btn,
 .next-btn {
     font-size: 50px;
@@ -103,13 +111,14 @@ button.wrong {
 
 /* class for the layout of the buttons */
 
-.btn-grid {
+.btn-grid { 
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-items: center;
-    gap: 30px;
+    gap: 10px;
     margin-top: 175px;
-    margin-right: 275px;
+    margin-right: 275px; 
+    
 }
 
 .play-controls {
@@ -117,13 +126,13 @@ button.wrong {
     justify-content: center;
     align-items: center;
 }
-
+/* to hide certain classes */
 .hidden {
     display: none;
 }
 
 
-/* Scores */
+/* to keep track of the players score */
 #score-area {
     display: flex;
     justify-content: space-evenly;
