@@ -161,7 +161,8 @@ button.wrong {
 }
 /* to hide certain classes */
 .hidden {
-    display: none;
+    display: none
+    !important;
 }
 
 /* to keep track of the players score */

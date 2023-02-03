@@ -4,7 +4,7 @@ playButton.addEventListener('click', runGame)
 const nextButton = document.getElementById('next-btn')
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
-    setNextQuestion() // error
+    setNextQuestion()         
 })
 const questionContainerElement = document.getElementById('question')
 
@@ -15,11 +15,15 @@ const scoreAreaElement = document.querySelectorAll('.scores')
 for (let i = 0; i < scoreAreaElement.length; i++) {
     scoreAreaElement[i].classList.add('hidden')
 }
-
+const introContainer = document.getElementById('intro-container') // wont hide
+const gameContainer = document.getElementById('container')
 let shuffledQuestions, currentQuestionIndex 
 // function to get the game started
 function runGame() {
     console.log('run')
+    console.log(introContainer)
+    introContainer.classList.add('hidden') // wont hide
+    gameContainer.classList.remove('hidden')
     playButton.classList.add('hidden')
     nextButton.classList.remove('hidden')
     questionContainerElement.classList.remove('hidden')
@@ -27,16 +31,15 @@ function runGame() {
      for (let i = 0; i < scoreAreaElement.length; i++) {
         scoreAreaElement[i].classList.remove('hidden') // for loop to remove hidden class from the score
      }
-
+     // shuffles the questions and gives out a random one 
      shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     setNextQuestion(shuffledQuestions, currentQuestionIndex)
-
     }
 // function to set the next question 
 function setNextQuestion(question, index) {
     resetState()
-    showQuestion(question[index]) // error
+    showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 // Function to show answers for question 
 function showQuestion(question) {
@@ -63,7 +66,7 @@ Array.from(gameAnswersElement.children).forEach(button => {
     nextButton.classList.remove('hidden')
 })
 }
-
+// sets green for correct and red for wrong answer
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -80,6 +83,7 @@ function clearStatusClass(element) {
 
 // function to reset the answers of the game
 function resetState() {
+    clearStatusClass(document.body)
     nextButton.classList.add('hidden')
     while (gameAnswersElement.firstChild) {
         gameAnswersElement.removeChild
