@@ -16,10 +16,19 @@
 
 <body>
     <section>
-        <header id="header"><label>Riddler Death Trap</label></header>
+        <header id="header"><label>Riddler Death Trap <i class="fa-solid fa-question"></i></label></header>
     </section>
     <section>
-        <div class="container">
+        <div id="intro-container">
+            <p>Greetings, citizen of Gotham. You have entered The Riddler's domain. I have been watching you, and I know of your interest in the Caped Crusader. You think you have what it takes to match wits with me?
+             Well, we'll see about that.
+             I have prepared a little game for you. A quiz, if you will. You will answer questions about the Dark Knight, and for each correct answer, you will earn a step closer to freedom.
+             But be warned, one false move and you will activate the trap, and suffer the consequences.
+             Do you have what it takes to solve the puzzles and outwit me? The choice is yours. But remember, the stakes are high and the clock is ticking. Good luck Gothamite, The Riddler is watching.</p>
+             <button type="button" id="play-btn" class="play-btn btn">Play</button></div>
+    </section>
+    <section>
+        <div id="container" class="hidden">
             <div id="question-container">
                 <div id="question" class="hidden"></div>
                 <div id="game-answers" class="btn-grid hidden">
@@ -30,7 +39,6 @@
                 </div>
             </div>
             <div class="play-controls">
-                <button type="button" id="play-btn" class="play-btn btn">Play</button>
                 <button type="button" id="next-btn" class="next-btn btn hidden">Next</button>
             </div>
             <div id="score-area">
