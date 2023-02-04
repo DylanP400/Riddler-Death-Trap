@@ -46,9 +46,10 @@ body {
     justify-content: center;
     margin-top: 10px;
     font-size: 25px;
-    color: blue;
+    color: white;
     font-family: 'Crimson Text', serif;
 }
+
 /* container for the introduction of the game */
 #intro-container {
     display: flex;
@@ -66,9 +67,6 @@ body {
     opacity: 0.7;
 }
 
-#intro-container img {
- opacity: 0.5;
-}
 
 /* Container for the game */
 #container {
@@ -91,7 +89,7 @@ body {
 /* styles for game buttons */
 .btn {
     padding: 15px 30px;
-    margin: 30px;
+    margin: 20px;
     border: 2px solid grey;
     border-radius: 10px;
     color: black;
@@ -110,7 +108,7 @@ body {
 /* To create a hover effect When you place the mouse on the buttons */
 .btn:hover {
     background-color: black;
-    color: white;
+    color: green;
     border: 3px solid white;
     font-size: 25px;
     font-family: 'Roboto Condensed', sans-serif;
@@ -148,7 +146,7 @@ button.wrong {
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-items: center;
-    gap: 10px;
+    gap: 10px; 
     margin-top: 175px;
     margin-right: 275px; 
     
@@ -170,6 +168,7 @@ button.wrong {
     display: flex;
     justify-content: space-evenly;
     font-size: 20px;
+    color: white;
 }
 
 footer {
