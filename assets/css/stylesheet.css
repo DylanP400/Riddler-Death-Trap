@@ -79,10 +79,10 @@ body {
     box-shadow: 0 0 10px 2px black;
     border-radius: 20px;
 
-    background-image: url(../images/bman-grey-bg.jpg);
+    background-image: url(../images/riddler.jpg);
     background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
     opacity: .9;
     padding-bottom: 20px;
     height: auto;
