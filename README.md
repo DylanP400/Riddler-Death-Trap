@@ -77,8 +77,20 @@
 # Technologies Used
 
 ## languages used
+* HTML, CSS and Javascript were used to create this website.
 
-## Frameworks, Libraries & Programs Used
+ ## Frameworks, Libraries & Programs Used
+* [Git](https://git-scm.com/) - For version Control.
+* [Github](https://github.com/) - Used to save amd store the files for the website. 
+* [Gitpod](https://www.gitpod.io/) - Was used to created my code.
+* [Google Fonts](https://fonts.google.com/) - Used to import the fonts used on the website.
+* [Font awesome](https://fontawesome.com/) - For the iconography on the website.
+* [Google Dev Tools](https://developer.chrome.com/docs/devtools/) - To troubleshoot and test features, solve issues with responsiveness and styling.
+* [AM I Resposnsive?](https://amiresponsive.co.uk/) - Used to show the Website image on a range of devices.
+* [Shields](https://shields.io/) - For the buttons at the top of my Readme.
+* [Favicon](https://www.favicon-generator.org/) - Used to make a Favicon for the website.
+* [Coolors](https://coolors.co/808080-ff0000-ffffff-f5f5f5-000000) - For my colour scheme.
+
 
 # Testing
 
@@ -99,7 +111,7 @@ To Depoy a Website using Github Pages you need too.
 ### How to Fork
 ## To fork the repository:
 1. Log in to Github.
-2. Go to the repository for this project, [DylanP400/Quin-abby](https://github.com/DylanP400/Quin-abby)
+2. Go to the repository for this project, [DylanP400/Quin-abby](https://github.com/DylanP400/Riddler-Death-Trap)
 3. Click the Fork button in the top right corner.
 
 ### How to clone
