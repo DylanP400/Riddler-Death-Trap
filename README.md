@@ -10,6 +10,8 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/DylanP400/batman-quiz-game)
 ![GitHub top language](https://img.shields.io/github/languages/top/DylanP400/batman-quiz-game)
 
+[View the live page for the game](https://dylanp400.github.io/Riddler-Death-Trap/index.html).
+
 # Contents 
 * [User Experience](#user-experience)
   * [Initial Discussion](#initial-discussion)
