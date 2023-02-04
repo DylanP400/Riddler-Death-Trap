@@ -15,14 +15,15 @@ const scoreAreaElement = document.querySelectorAll('.scores')
 for (let i = 0; i < scoreAreaElement.length; i++) {
     scoreAreaElement[i].classList.add('hidden')
 }
-const introContainer = document.getElementById('intro-container') // wont hide
+
+const introContainer = document.getElementById('intro-container')
 const gameContainer = document.getElementById('container')
+
 let shuffledQuestions, currentQuestionIndex 
+
 // function to get the game started
 function runGame() {
-    console.log('run')
-    console.log(introContainer)
-    introContainer.classList.add('hidden') // wont hide
+    introContainer.classList.add('hidden')
     gameContainer.classList.remove('hidden')
     playButton.classList.add('hidden')
     nextButton.classList.remove('hidden')
@@ -66,6 +67,7 @@ Array.from(gameAnswersElement.children).forEach(button => {
     nextButton.classList.remove('hidden')
 })
 }
+
 // sets green for correct and red for wrong answer
 function setStatusClass(element, correct) {
     clearStatusClass(element)
@@ -481,5 +483,106 @@ const questions = [
                 correct: false
             }
         ]
+    },
+    {
+        question: 'Who killed Nightwing in Injustice?',
+        answers: [{
+                text: 'Batman',
+                correct: false
+            },
+            {
+                text: 'Damian',
+                correct: true
+            },
+            {
+                text: 'Joker',
+                correct: false
+            },
+            {
+                text: 'Harley Quinn',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'Which nightclub is ownded by the Penguin?',
+        answers: [
+            { text: 'The Monarch ', correct: false },
+            { text: 'The Lazarus Pits', correct: false },
+            { text: 'Bludhaven', correct: false },
+            { text: 'The Iceberg Lounge', correct: true }
+        ]
+    },
+    {
+        question: 'Who directed Batman (1989)?',
+        answers: [
+            { text: 'Steven Spielberg', correct: false },
+            { text: 'Tim Burton', correct: true },
+            { text: 'Quentin Tarantino', correct: false },
+            { text: 'Michael Bay', correct: false}
+        ]
+    },
+    {
+        question: 'What colour is the Riddlers costume',
+        answers: [
+            { text: 'Orange', correct: false },
+            { text: 'Black', correct: false },
+            { text: 'Green', correct: true },
+            { text: 'Red', correct: false }
+        ]
+    },
+    {
+        question: 'Whos not in the Justice League?',
+        answers: [
+            { text: 'Ant Man', correct: true },
+            { text: 'The Flash', correct: false },
+            { text: 'Martian Manhunter', correct: false },
+            { text: 'Green Arrow', correct: false}
+        ]
+    },
+    {
+        question: 'What is the name of the hospital prison featured in the Batman movies?',
+        answers: [
+            { text: 'Alcatraz', correct: false },
+            { text: 'The Raft', correct: false },
+            { text: 'Black Gate', correct: false },
+            { text: 'Arkham Asylum', correct: true }
+        ]
+    },
+    {
+        question: 'What is the Prison called in Gotham?',
+        answers: [
+            { text: 'Arkham', correct: false },
+            { text: 'White Row', correct: false },
+            { text: 'Black Gate', correct: true },
+            { text: 'The Raft', correct: false}
+        ]
+    },
+    {
+        question: 'Which of these is the title of a Batman movie?',
+        answers: [
+            { text: 'Batman: Hush', correct: true },
+            { text: 'Batman: Whisper', correct: false },
+            { text: 'Batman: silence', correct: false },
+            { text: 'Batman Screams', correct: false}
+        ]
+    },
+    {
+        question: 'Who really was Hush?',
+        answers: [
+            { text: 'Thomas Elliot', correct: false },
+            { text: 'Bane', correct: false },
+            { text: 'Scarecrow', correct: false },
+            { text: 'The Riddler', correct: true }
+        ]
+    },
+    {
+        question: 'who is a Batman Villian?',
+        answers: [
+            { text: 'Dead Guy', correct: false },
+            { text: 'Dead Bang', correct: false },
+            { text: 'Dead Shot', correct: true },
+            { text: 'Dead Fall', correct: false}
+        ]
     }
-];
+]
