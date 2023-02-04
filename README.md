@@ -1,4 +1,8 @@
-# Batman quiz game.
+# Riddler Death Trap ? 
+## Can you escape the Riddler?
+
+**Riddler Death Trap** is a batman quiz I made for my Portfoilio two project using HTML, CSS and Javascript. The game starts with a introduction text with a play button once you click the play button the game will start. I have added 40 different questions to make the game more fun and for replayability. Each question has 4 answers.
+
 
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/DylanP400/batman-quiz-game)
@@ -44,8 +48,13 @@
 # User Experience
 
 ## Initial Discussion
+**Riddler Death Trap** is a quiz game with over 30 different questions to test your knowledge of everything Batman.
 
 ### Key information for this site
+* A fun quiz game to play.
+* Forty different questions.
+* A Timer to count down how long you have left.
+* A score tracker to show you the score. 
 
 ## User Stories
 
