@@ -3,8 +3,10 @@ playButton.addEventListener('click', runGame)
 
 const nextButton = document.getElementById('next-btn')
 nextButton.addEventListener('click', () => {
+    timeSecond = 15
+    displayTime(timeSecond)
     currentQuestionIndex++
-    setNextQuestion()         
+    setNextQuestion()
 })
 const questionContainerElement = document.getElementById('question')
 
@@ -19,12 +21,15 @@ for (let i = 0; i < scoreAreaElement.length; i++) {
 const introContainer = document.getElementById('intro-container')
 const gameContainer = document.getElementById('container')
 
+const gameTimer = document.getElementById('timer')
+
 let shuffledQuestions, currentQuestionIndex 
 
 // function to get the game started
 function runGame() {
     introContainer.classList.add('hidden')
     gameContainer.classList.remove('hidden')
+    gameTimer.classList.remove('hidden')
     playButton.classList.add('hidden')
     nextButton.classList.remove('hidden')
     questionContainerElement.classList.remove('hidden')
@@ -36,7 +41,17 @@ function runGame() {
      shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     setNextQuestion(shuffledQuestions, currentQuestionIndex)
+    const countDown = setInterval (()=>{
+        timeSecond--;
+        displayTime(timeSecond);
+        if(timeSecond <= 0 || timeSecond<1){
+        endTime();
+        clearInterval(countDown)
+        }
+       },1000)
     }
+
+
 // function to set the next question 
 function setNextQuestion(question, index) {
     resetState()
@@ -54,7 +69,6 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswer)
         gameAnswersElement.appendChild(button)
-        
     })
 }
 
@@ -92,6 +106,40 @@ function resetState() {
         (gameAnswersElement.firstChild)
     }
 }
+/* Timer 
+* I used this video as a guideline for creating my timer https://www.youtube.com/watch?v=_a4XCarxwr8&t=66s
+*/ 
+const timer = document.getElementById('timer')
+let timeSecond = 15;
+
+displayTime(timeSecond)
+
+function displayTime(second) {
+    const sec = Math.floor(second % 60);
+    timer.innerHTML = `${sec}`
+}
+
+function endTime() {
+    timer.innerHTML = 'Game Over You lost! Better luck next time?'
+    gameOver()
+}
+
+function stopTime() {
+    clearInterval(countDown);
+}
+
+function gameOver() {
+    gameContainer.classList.add('hidden')
+    gameTimer.classList.remove('hidden')
+    playButton.classList.remove('hidden')
+    nextButton.classList.remove('hidden')
+    questionContainerElement.classList.add('hidden')
+    gameAnswersElement.classList.add('hidden')
+     for (let i = 0; i < scoreAreaElement.length; i++) {
+        scoreAreaElement[i].classList.remove('hidden') // for loop to remove hidden class from the score
+     }
+}
+
 
 // Questions for the game 
 const questions = [
