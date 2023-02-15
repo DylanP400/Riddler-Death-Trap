@@ -127,7 +127,8 @@ To Depoy a Website using Github Pages you need too.
 # Credits
 
 ## Code Used
-
+* I watched this video as a guideline and inspiration https://www.youtube.com/watch?v=riDzcEQbX6k&t=497s 
+* I watched this video for the timer function https://www.youtube.com/watch?v=_a4XCarxwr8&t=66s
 ## Content
 
 ## Media 
