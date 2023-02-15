@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,20 +20,28 @@
         <header id="header"><label>Riddler Death Trap <i class="fa-solid fa-question"></i></label></header>
     </section>
     <section>
+        <!--Game introduction with a play button to start the game-->
         <div id="intro-container">
-            <p>Greetings, citizen of Gotham. You have entered The Riddler's domain. I have been watching you, and I know of your interest in the Caped Crusader. You think you have what it takes to match wits with me?
-             Well, we'll see about that.
-             I have prepared a little game for you. A quiz, if you will. You will answer questions about the Dark Knight, and for each correct answer, you will earn a step closer to freedom.
-             But be warned you have 15 seconds for each question, one second too late and you will activate the trap, and suffer the consequences.
-             Do you have what it takes to solve the puzzles and outwit me? The choice is yours. But remember, the stakes are high and the clock is ticking. Good luck Gothamite, The Riddler is watching.</p>
-             <button type="button" id="play-btn" class="play-btn btn">Play</button></div>
+            <p>Greetings, citizen of Gotham. You have entered The Riddler's domain. I have been watching you, and I know
+                of your interest in the Caped Crusader. You think you have what it takes to match wits with me?
+                Well, we'll see about that.
+                I have prepared a little game for you. A quiz, if you will. You will answer questions about the Dark
+                Knight, and for each correct answer, you will earn a step closer to freedom.
+                But be warned you have 15 seconds for each question, one second too late and you will activate the trap,
+                and suffer the consequences.
+                Do you have what it takes to solve the puzzles and outwit me? The choice is yours. But remember, the
+                stakes are high and the clock is ticking. Good luck Gothamite, The Riddler is watching.</p>
+            <button type="button" id="play-btn" class="play-btn btn">Play</button>
+        </div>
     </section>
     <section>
+        <!--15 second timer for the game-->
         <div id="timer-container">
-        <div id="timer" class="hidden">
-            00:00
+            <div id="timer" class="hidden">
+                00:00
             </div>
         </div>
+        <!--Buttons which container the answers for the game-->
         <div id="container" class="hidden">
             <div id="question-container">
                 <div id="question" class="hidden"></div>
@@ -43,21 +52,27 @@
                     <button type="button" class="btn">s</button>
                 </div>
             </div>
+            <!--Play button and next button-->
             <div class="play-controls">
                 <button type="button" id="next-btn" class="next-btn btn hidden">Next</button>
             </div>
+            <!--Score tracking-->
             <div id="score-area">
-                <p class="scores">Correct Answers <span id="score">0</span></p>
-                <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+                <p class="scores">Correct Answers <span id="correct-answer">0</span></p>
+                <p class="scores">Incorrect Answers <span id="incorrect-answer">0</span></p>
             </div>
         </div>
     </section>
     <section>
-    <footer>
-        <a href="https://www.linkedin.com/in/dylan-pigott-software-developer/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/DylanP400/batman-quiz-game" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.Youtube.com" aria-label="Youtube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
-    </footer>
+        <footer>
+            <!--Links for social media with the matching icons/logos-->
+            <a href="https://www.linkedin.com/in/dylan-pigott-software-developer/" aria-label="LinkedIn" target="_blank"
+                rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/DylanP400/batman-quiz-game" aria-label="LinkedIn" target="_blank"
+                rel="noopener"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.Youtube.com" aria-label="Youtube" target="_blank" rel="noopener"><i
+                    class="fa-brands fa-youtube"></i></a>
+        </footer>
     </section>
 
 
@@ -66,4 +81,5 @@
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/aed26dd8dc.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

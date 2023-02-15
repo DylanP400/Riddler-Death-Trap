@@ -1,3 +1,5 @@
+// For this project I used this video as a guideline and inspiration https://www.youtube.com/watch?v=riDzcEQbX6k&t=497s
+
 const playButton = document.getElementById('play-btn')
 playButton.addEventListener('click', runGame)
 
@@ -48,7 +50,7 @@ function runGame() {
     currentQuestionIndex = 0
     setNextQuestion(shuffledQuestions, currentQuestionIndex)
     const countDown = setInterval(() => {
-        timeSecond--;
+        timeSecond--; // 15 seconds timer
         displayTime(timeSecond);
         if (timeSecond <= 0 || timeSecond < 1) {
             endTime();
@@ -77,11 +79,11 @@ function showQuestion(question) {
         gameAnswersElement.appendChild(button)
     })
 }
-
+// function to select the correct/wrong answers with score tracking at the bottm
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
-    if (correct) { // score problem
+    if (correct) {
         correctAnswers++
     } else {
         incorrectAnswers++;
@@ -110,7 +112,7 @@ function setStatusClass(element, correct) {
         element.classList.add('wrong')
     }
 }
-
+// clears the function above 
 function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
